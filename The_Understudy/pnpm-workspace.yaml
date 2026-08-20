@@ -1,0 +1,19 @@
+# SECURITY: minimum package release age for npm supply-chain defense.
+minimumReleaseAge: 1440
+
+packages:
+  - artifacts/*
+
+catalog:
+  '@vitejs/plugin-react': ^5.0.4
+  vite: ^7.3.2
+  react: 19.1.0
+  react-dom: 19.1.0
+  framer-motion: ^12.23.24
+  lucide-react: ^0.545.0
+  zod: ^3.25.76
+  '@types/node': ^25.3.3
+  '@types/react': ^19.2.0
+  '@types/react-dom': ^19.2.0
+
+autoInstallPeers: false

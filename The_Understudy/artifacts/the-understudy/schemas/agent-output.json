@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "The Understudy Agent Output",
+  "type": "object",
+  "required": [
+    "brief",
+    "director",
+    "producer",
+    "evaluator"
+  ],
+  "properties": {
+    "brief": {
+      "type": "string"
+    },
+    "director": {
+      "type": "object",
+      "required": [
+        "beats",
+        "camera",
+        "visualStyle",
+        "audioMood"
+      ],
+      "properties": {
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "camera": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "shot",
+              "instruction",
+              "action"
+            ],
+            "properties": {
+              "shot": {
+                "type": "integer"
+              },
+              "instruction": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "visualStyle": {
+          "type": "string"
+        },
+        "audioMood": {
+          "type": "string"
+        }
+      }
+    },
+    "producer": {
+      "type": "object",
+      "required": [
+        "assets",
+        "tasks",
+        "timeline"
+      ],
+      "properties": {
+        "assets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "type"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "tasks": {
+          "type": "array"
+        },
+        "timeline": {
+          "type": "array"
+        }
+      }
+    },
+    "evaluator": {
+      "type": "object",
+      "required": [
+        "scores",
+        "average"
+      ],
+      "properties": {
+        "scores": {
+          "type": "object"
+        },
+        "average": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
